@@ -67,57 +67,12 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.fragment_container_view, FirstFragment::class.java, bundle,
                     "firstFragment$firstFragmentsCount"
                 )
-                .addToBackStack(fragmentID)
                 .commit()
 
 
         }
 
-        //Add a new Fragment to the Back Stack and log the count
-        binding.first.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString("name", "First Fragment")
-            bundle.putInt("count", supportFragmentManager.backStackEntryCount)
-            val fragmentID = Random.nextInt(0,1000).toString()
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragment_container_view, FirstFragment::class.java, bundle,
-                    "firstFragment$firstFragmentsCount"
-                )
-                .addToBackStack(fragmentID)
-                .commit()
 
-
-        }
-
-        //Add a new Fragment to the Back Stack and log the count
-        binding.second.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString("name", "Second Fragment")
-            bundle.putInt("count", supportFragmentManager.backStackEntryCount)
-            val fragmentID = Random.nextInt(0,1000).toString()
-            supportFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragment_container_view, FirstFragment::class.java, bundle,
-                    "secondFragment$secondFragmentsCount"
-                )
-                .addToBackStack(fragmentID)
-                .commit()
-
-
-        }
-
-        //Remove the topmost fragment from backstack when pop is clicked
-        binding.pop.setOnClickListener {
-            supportFragmentManager.popBackStack()
-        }
-
-        //Remove all the fragment from backstack when clear is clicked
-        binding.clear.setOnClickListener {
-            for (i in 0 until supportFragmentManager.backStackEntryCount) {
-                supportFragmentManager.popBackStack()
-            }
-        }
 
     }
 

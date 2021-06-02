@@ -75,71 +75,11 @@
         android:id="@+id/fragment_container_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/pop"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/background"
-        app:layout_constraintTop_toBottomOf="@+id/first"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/first"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="ADD FIRST\nFRAGMENT"
-        android:textColor="@color/colorTextWHITE"
-        app:layout_constraintEnd_toStartOf="@+id/second"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        tools:text="ADD FIRST\nFRAGMENT" />
-
-    <Button
-        android:id="@+id/pop"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="POP BACKSTACK"
-        android:textColor="@color/colorTextWHITE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/clear"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/background"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="POP BACKSTACK" />
-
-    <Button
-        android:id="@+id/second"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="ADD SECOND\nFRAGMENT"
-        android:textColor="@color/colorTextWHITE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/first"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        tools:text="ADD SECOND\nFRAGMENT" />
-
-    <Button
-        android:id="@+id/clear"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="CLEAR BACKSTACK"
-        android:textColor="@color/colorTextWHITE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pop"
-        tools:text="CLEAR BACKSTACK" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
