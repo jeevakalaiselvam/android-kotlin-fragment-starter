@@ -44,4 +44,10 @@ class FirstFragment:Fragment(R.layout.fragment_first){
         binding.data.text = "$name Added..";
         binding.count.text = "$count";
     }
+
+    //Remove the Binding to be garbage collected later
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null;
+    }
 }
